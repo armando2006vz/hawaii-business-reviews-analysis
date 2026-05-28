@@ -1,2 +1,4 @@
-# hawaii-business-reviews-analysis
-Final project for UCSD(DSC80)
+# hawaii-business-reviews-analysis-atdsc80
+Final project for UCSD at DSC80 - hawaii google map reviews
+
+
