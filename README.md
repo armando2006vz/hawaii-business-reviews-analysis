@@ -153,7 +153,7 @@ A logarithmic tranformation (`log1p`) was applied to `num_of_reviews` to account
 
 `zipcode` was encoded using `OneHotEncoder`  because zip codes are nominal categories without orderings.
 
-`description_length` is a numerical features that counts words in description.
+`description_length` is a numerical feature that counts words in description.
 
 Preprocessing and fitting of model was implemented in sklearn pipeline
 
@@ -170,6 +170,7 @@ To evaluate model performance across groups, we will compare businesses with rel
 **Hypotheses:** T
 
 **Null -** The model is fair, any difference in `R²` between low/high review businesses is random chance.
+
 **Alternate -** The model is unfair, model achieves higher `R²` for high review business than low review business.
 
 **Test Statistic:** R²(high-review businesses) - R²(low_review businesses)
