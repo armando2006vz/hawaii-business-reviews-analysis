@@ -42,7 +42,15 @@ The columns that are most relevant to our question are `gmap_id`, `price`, `rati
 
 ### Data Cleaning
 
-Firstly, we perform an inner merge on `gmap_id` so only the reviews that are linked to a real business remain. This is necessary because we require both reviews and business metadata so we couldn’t perform a left, right, or outer merge. Then we remove price levels that are not some form of `$` as everything else would be nonsensical as the main form of currency in Hawaii is USD.
+Firstly, we perform an inner merge on `gmap_id` so only the reviews that are linked to a real business remain. This is necessary because we require both reviews and business metadata so we couldn’t perform a left, right, or outer merge. Then we remove price levels that are not some form of `$` as everything else would be nonsensical as the main form of currency in Hawaii is USD. This results in a DataFrame that looks like this (note the empty price column is due to a large amount of `None` observations):
+
+|     user_id |   rating | gmap_id                               | name                        | price   |
+|------------:|---------:|:--------------------------------------|:----------------------------|:--------|
+| 1.13965e+20 |        5 | 0x7c00159b5b1b1d25:0x8d2d85d4a758290e | SMP - Single Marine Program |         |
+| 1.13965e+20 |        5 | 0x7c00159b5b1b1d25:0x8d2d85d4a758290e | SMP - Single Marine Program |         |
+| 1.16656e+20 |        5 | 0x7c00159b5b1b1d25:0x8d2d85d4a758290e | SMP - Single Marine Program |         |
+| 1.16656e+20 |        5 | 0x7c00159b5b1b1d25:0x8d2d85d4a758290e | SMP - Single Marine Program |         |
+| 1.00834e+20 |        5 | 0x7c00159b5b1b1d25:0x8d2d85d4a758290e | SMP - Single Marine Program |         |
 
 ### Univariate Analysis
 
