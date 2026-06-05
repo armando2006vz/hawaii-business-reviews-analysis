@@ -22,6 +22,22 @@ Alternate Hypothesis: The distribution of customer review ratings differs across
 
 This will provide insight into how businesses might want to value their products as statistically significant differences may point to an association between price level and customer reviews. However, this does not imply a causal relationship.
 
+## The Dataset
+
+Before cleaning, the `meta` dataset contains `21,507` rows and `reviews` contains `150,4347` rows. 
+
+The columns that are most relevant to our question are `gmap_id`, `price`, `rating`, `avg_rating`, and `num_of_reviews`.
+
+**`gmap_id`:** This column appears in both the `reviews` dataset and the `meta` dataset. It is a unique id for each business and it was primarily used to merge the `reviews` dataset with the `meta` dataset so that each review could be connected to a real business.
+
+**`price`:** This column comes from the `meta` dataset. It represents the business price level, such as `$`, `$$`, `$$$`, and `$$$$`. This is one of the main columns for our question because we are trying to understand whether business price level influences the distribution of customer review ratings.
+
+**`rating`:** This column comes from the `reviews` dataset. It represents what review rating a business received from an individual customer. This is column we are trying to predict because our question is focused on whether the distribution of customer review ratings differs across business price levels.
+
+**`avg_rating`:** This column comes from the `meta` dataset. It represents the average rating of a business across many individuals. We use this column to understand overall customer satisfaction for each business, and it will also play a role in our missingness analysis.
+
+**`num_of_reviews`:** This column comes from the `meta` dataset. It represents the total number of reviews a business has. This gives more context about how much review information is available for each business, and we also use it when analyzing whether missingness depends on other columns.
+
 # Data Cleaning and Exploratory Data Analysis
 
 ### Data Cleaning
