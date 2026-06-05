@@ -120,7 +120,7 @@ Baseline model wil use two features:
 
 **Feature Transformations:**
 
-SInce `price` is an ordinal categorical variable, it was encoded using `OrdinalEncoder` with the following ordering: `$ < $$ < $$$ < $$$$`
+Since `price` is an ordinal categorical variable, it was encoded using `OrdinalEncoder` with the following ordering: `$ < $$ < $$$ < $$$$`
 
 A logarithmic tranformation (`log1p`) was applied to `num_of_reviews` to account for large differences in review counts across a competitive business landscape.
 
@@ -134,4 +134,54 @@ This baseline model perfomance appears relatively weak, as it currently only exp
 
 ## Final Model
 
+**Additional Features:**
+
+- `zipcode` - captures geographic informatio nabout business location, customer demogrpahic could be different across Hawaii as this could influence business ratings.
+- `description_length` - Business's with longer description may provide info to customers about establishment, as it is possibly associatedwith satisfaction of customer.
+
+Final model uses 4 features:
+- `price` (ordinal)
+- `num_of_reviews` (quantitative)
+- `zipcode` (nominal)
+- `description_length` (quantitative
+
+**Feature Transformations:**
+
+Since `price` is an ordinal categorical variable, it was encoded using `OrdinalEncoder` with the following ordering: `$ < $$ < $$$ < $$$$`
+
+A logarithmic tranformation (`log1p`) was applied to `num_of_reviews` to account for large differences in review counts across a competitive business landscape.
+
+`zipcode` was encoded using `OneHotEncoder`  because zip codes are nominal categories without orderings.
+
+`description_length` is a numerical features that counts words in description.
+
+Preprocessing and fitting of model was implemented in sklearn pipeline
+
 ## Fairness Analysis
+
+To evaluate model performance across groups, we will compare businesses with relativel low reviews agaisnt business with many reviews.
+
+**Groups:**
+- Group X: Low-review businesses (below the median # of reviews)
+- *Group Y: High-review businesses (at or above median # of reviews
+
+**Evaulation Metric:** Because our prediction problem is a regression question, we will utilize `R²` as our evaluation metric.
+
+**Hypotheses:** T
+
+**Null -** The model is fair, any difference in `R²` between low/high review businesses is random chance.
+**Alternate -** The model is unfair, model achieves higher `R²` for high review business than low review business.
+
+**Test Statistic:** R²(high-review businesses) - R²(low_review businesses)
+Large positive values provide evidence for alternate
+
+**Significance Level:** α = 0.05
+
+**Results:**
+
+- Observed Statistic: 0.04718911054922892
+- P-value: 0.004995004995004995
+
+**Conclusion:** 0.004995004995004995 < .05, we reject the null. There is evidence that model performs better for high-review businneses.
+
+
