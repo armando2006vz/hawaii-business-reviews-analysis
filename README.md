@@ -2,7 +2,27 @@
 
 ## Introduction
 
-## Data Cleaning and Exploratory Data Analysis
+## Project Overview
+
+Firstly, we chose the Hawaii Google Map Reviews dataset because we are interested in learning about the business side of tourism in locations like Hawaii through feedback from customers. Reviews will provide insight into customer satisfaction, service quality, and business metrics which help us better understand what makes a company “good” through the perspective of a consumer.
+
+By analyzing this data an understanding of what creates negative or positive experiences will be created, potentially helping businesses improve service quality in Hawaii’s tourism market.
+
+## Research Question
+
+Question: Does business price level influence the distribution of customer review ratings?
+
+## Hypotheses
+
+Null Hypothesis: The distribution of customer review ratings is independent of business price level.
+
+Alternate Hypothesis: The distribution of customer review ratings differs across business price levels.
+
+## Purpose
+
+This will provide insight into how businesses might want to value their products as statistically significant differences may point to an association between price level and customer reviews. However, this does not imply a causal relationship.
+
+# Data Cleaning and Exploratory Data Analysis
 
 ### Data Cleaning
 
