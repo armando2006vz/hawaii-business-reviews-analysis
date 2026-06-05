@@ -1,6 +1,6 @@
 # Hawaii Google Maps Reviews
 
-## Introduction
+# Introduction
 
 ## Project Overview
 
