@@ -24,7 +24,7 @@ This will provide insight into how businesses might want to value their products
 
 ## The Dataset
 
-Before cleaning, the `meta` dataset contains `21,507` rows and `reviews` contains `150,4347` rows. 
+The dataset consists of two different files. The first one is called "meta-Hawaii.json.gz" which we turned into a DataFrame called `meta` and contains information about the business such as location, name, and hours. The second one is called "review-Hawaii_10.json.gz" which we turned into a DataFrame called `reviews`, which contains user review information for the businesses in the `meta` dataset. Before cleaning, the `meta` dataset contains `21,507` rows and `reviews` contains `150,4347` rows. 
 
 The columns that are most relevant to our question are `gmap_id`, `price`, `rating`, `avg_rating`, and `num_of_reviews`.
 
