@@ -97,6 +97,17 @@ frameborder="0"
 
 ## Framing a Prediction Problem
 
+**Prediction Problem:** We developed a regression model to predict a business's average Google Maps rating (avg_rating) utilizing information about the business, including number of reviews and price level
+
+**Response Variable:** avg_rating, we chose this variable becasue a business's average rating is an important of a customer's satisifaction and overall success.
+
+**Applied Features:**
+
+- `num_of_reviews`: Number of reviews provides info about a business's popularity, possibly associated with average rating
+- `price`: Price level could influence influence a customers expectations and affect ratings
+
+**Evaluation Metric:** R², With this being a regression problem, R² allows us to mesure how much variance is explained by model.
+
 ## Baseline Model
 
 ## Final Model
