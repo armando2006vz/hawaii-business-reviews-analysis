@@ -42,15 +42,15 @@ The columns that are most relevant to our question are `gmap_id`, `price`, `rati
 
 ## Data Cleaning
 
-Firstly, we subset `reviews` to only include `user_id`, `rating`, and `gmap_id` because to answer our question we primarily need the rating and price columns and the rest is for identification and merging. Similarily, we subset `meta` to only include `name`, `gmap_id`, and `price`. Then, we perform an inner merge on `gmap_id` so only the reviews that are linked to a real business remain. This is necessary because we require both reviews and business metadata so we couldn’t perform a left, right, or outer merge. Then we remove price levels that are not some form of `$` as everything else would be nonsensical as the main form of currency in Hawaii is USD. This results in a DataFrame that looks like this (note the empty price column is due to a large amount of `None` observations):
+Firstly, we subset `reviews` to only include `user_id`, `rating`, and `gmap_id` because to answer our question we primarily need the rating and price columns and the rest is for identification and merging. Similarily, we subset `meta` to only include `name`, `gmap_id`, and `price`. Then, we perform an inner merge on `gmap_id` so only the reviews that are linked to a real business remain. This is necessary because we require both reviews and business metadata so we couldn’t perform a left, right, or outer merge. Then we remove price levels that are not some form of `$` as everything else would be nonsensical as the main form of currency in Hawaii is USD. This results in a DataFrame that looks like this:
 
-|     user_id |   rating | gmap_id                               | name                        | price   |
-|------------:|---------:|:--------------------------------------|:----------------------------|:--------|
-| 1.13965e+20 |        5 | 0x7c00159b5b1b1d25:0x8d2d85d4a758290e | SMP - Single Marine Program |         |
-| 1.13965e+20 |        5 | 0x7c00159b5b1b1d25:0x8d2d85d4a758290e | SMP - Single Marine Program |         |
-| 1.16656e+20 |        5 | 0x7c00159b5b1b1d25:0x8d2d85d4a758290e | SMP - Single Marine Program |         |
-| 1.16656e+20 |        5 | 0x7c00159b5b1b1d25:0x8d2d85d4a758290e | SMP - Single Marine Program |         |
-| 1.00834e+20 |        5 | 0x7c00159b5b1b1d25:0x8d2d85d4a758290e | SMP - Single Marine Program |         |
+|     user_id |   rating | gmap_id                              | name       | price   |
+|------------:|---------:|:-------------------------------------|:-----------|:--------|
+| 1.08979e+20 |        5 | 0x7c0014dcca83e7b1:0x1414a4475d8c17d | Buona Sera | $$      |
+| 1.08979e+20 |        5 | 0x7c0014dcca83e7b1:0x1414a4475d8c17d | Buona Sera | $$      |
+| 1.12409e+20 |        4 | 0x7c0014dcca83e7b1:0x1414a4475d8c17d | Buona Sera | $$      |
+| 1.12409e+20 |        4 | 0x7c0014dcca83e7b1:0x1414a4475d8c17d | Buona Sera | $$      |
+| 1.15716e+20 |        5 | 0x7c0014dcca83e7b1:0x1414a4475d8c17d | Buona Sera | $$      |
 
 ### Univariate Analysis
 
