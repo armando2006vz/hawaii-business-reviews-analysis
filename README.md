@@ -106,9 +106,31 @@ frameborder="0"
 - `num_of_reviews`: Number of reviews provides info about a business's popularity, possibly associated with average rating
 - `price`: Price level could influence influence a customers expectations and affect ratings
 
-**Evaluation Metric:** R², With this being a regression problem, R² allows us to mesure how much variance is explained by model.
+**Evaluation Metric:** R², With this being a regression problem, R² allows us to measure how much variance is explained by model.
 
 ## Baseline Model
+
+Our baseline model is a **Linear Regression** model that predicts a business's average google Maps rating (`avg_rating`).
+
+**Features:** 
+Baseline model wil use two features:
+
+- `price` (ordinal)
+- `num_of_reviews` (quantitative)
+
+**Feature Transformations:**
+
+SInce `price` is an ordinal categorical variable, it was encoded using `OrdinalEncoder` with the following ordering: `$ < $$ < $$$ < $$$$`
+
+A logarithmic tranformation (`log1p`) was applied to `num_of_reviews` to account for large differences in review counts across a competitive business landscape.
+
+These preprocessing steps and fitting of the model were implmented in a sklearn pipeline.
+
+**Model Performance:**
+
+- R² - 0.048
+
+This baseline model perfomance appears relatively weak, as it currently only explains about 4.8% of variance in business ratings . 
 
 ## Final Model
 
