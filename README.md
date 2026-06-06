@@ -194,7 +194,7 @@ These preprocessing steps and fitting of the model were implmented in a sklearn 
 This baseline model perfomance appears relatively weak, as it currently only explains about 4.8% of variance in business ratings, suggesting that these features aren't significantly influencing business ratings. 
 
 ## Final Model
-Our final model was a `RandomForestRegressor` to predict a business's average google Maps rating. We selected a Random Forest Regressor as it will be able nonlinear relationships between introduced feature that baseline model may miss.
+Our final model was a `RandomForestRegressor` used predict a business's average google Maps rating. We selected a Random Forest Regressor as it will be able nonlinear relationships between introduced feature that baseline model may miss.
 
 **Additional Features:**
 
