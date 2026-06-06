@@ -132,9 +132,9 @@ After running a permutation test we got a p-value of `.001996` which is less tha
 
 **p-value:** `.009`
 
-We conclude that the distribution of customer review ratings differs across business price levels with p-value less than `.05`.
+Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. This most likely suggests that the distribution of customer review ratings differs across business price levels.
 
-This is effective in answering our main research question as this will show across all reviews that ratings are affected by the price level that the reviewed business is.
+Furthermore, this helps answer our main research question because it provides evidence that review ratings are not distributed the same way across each price level. However, this does not mean that price level causes higher or lower ratings, since a hypothesis test cannot prove a causal relationship. Instead, the result suggests that there is an association between business price level and customer review ratings.
 
 <iframe
 src="assets/hypothesis-test-distribution.html"
