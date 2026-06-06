@@ -89,7 +89,7 @@ This is a stacked bar chart which describes the distribution of ratings over eac
 
 ### NMAR Analysis
 
-We think price is NMAR.
+We think price may be NMAR because we hypothesize that whether a business has a listed price could depend on the price level itself. For example, if a business is very expensive, it may be less likely to have `$$$$` displayed because that could deter potential customers. Therefore, the missingness of price may depend on the unobserved value of price itself, rather than being fully explained by other observed columns in the dataset.
 
 ### Missingness Dependency
 
