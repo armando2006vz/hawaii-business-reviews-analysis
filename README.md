@@ -226,9 +226,8 @@ To create best model, we performed `GridSearchV` over Random Forest hyperparamet
 **Model Performance:**
 - R²: 0.055
 
-  The final model slighlty improved upon baseline by incorporating `zipcode` and `description_length`, the model explaining a greater proportion of variance. Nonetheless, improvement was limited, suggesting that these additional features dont influence business ratings much.
+The final model slightly improved upon baseline by incorporating `zipcode` and `description_length`, the model explaining a greater proportion of variance. Nonetheless, improvement was limited, suggesting that these additional features don't influence business ratings much. Furthermore, we hypothesize that these variables aren't great at predicting average rating because average rating is something that is subjective and changes from every experience so although factors like `zipcode` and `description_length` may inform us how established a business may be, they can't offer the insight we need to consistently estimate average rating.
   
-
 ## Fairness Analysis
 
 To evaluate model performance across groups, we will compare businesses with relatively low reviews agaisnt businesses with many reviews.
