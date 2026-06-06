@@ -131,6 +131,8 @@ height="600"
 frameborder="0"
 ></iframe>
 
+The figure above compares the distribution of review counts for businesses with hours information missing and businesses that present hours. Businesses with missing hours tend to create a review counts distribution that is different, showing that the missingness of `hours` column is related to reviews a business recieves. This is supported by our permutation (p = .001996), providing evidence that the missingness of `hours` isn't independent of `num_of_reviews`.
+
 ## Hypothesis Testing
 
 **Null Hypothesis:** The distribution of customer review ratings is independent of business price level.
@@ -187,9 +189,9 @@ These preprocessing steps and fitting of the model were implmented in a sklearn 
 
 **Model Performance:**
 
-- R² - 0.048
+- R²: 0.048
 
-This baseline model perfomance appears relatively weak, as it currently only explains about 4.8% of variance in business ratings. 
+This baseline model perfomance appears relatively weak, as it currently only explains about 4.8% of variance in business ratings, suggesting that these features aren't significantly influencing business ratings. 
 
 ## Final Model
 
@@ -216,6 +218,12 @@ A logarithmic tranformation (`log1p`) was applied to `num_of_reviews` to account
 
 Preprocessing and fitting of model was implemented in sklearn pipeline
 
+**Model Performance:**
+- R²: 0.055
+
+  The final model slighlty improved upon baseline by incorporating `zipcode` and `description_length`, the model explaining a greater proportion of variance. Nonetheless, improvement was limited, suggesting that these additional features dont influence business ratings much.
+  
+
 ## Fairness Analysis
 
 To evaluate model performance across groups, we will compare businesses with relativel low reviews agaisnt business with many reviews.
@@ -226,7 +234,7 @@ To evaluate model performance across groups, we will compare businesses with rel
 
 **Evaulation Metric:** Because our prediction problem is a regression question, we will utilize `R²` as our evaluation metric.
 
-**Hypotheses:** T
+**Hypotheses:** 
 
 **Null -** The model is fair, any difference in `R²` between low/high review businesses is random chance.
 
