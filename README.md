@@ -155,9 +155,9 @@ frameborder="0"
 
 ## Framing a Prediction Problem
 
-**Prediction Problem:** We developed a regression model to predict a business's average Google Maps rating (`avg_rating`) utilizing information about the business, including number of reviews (`num_of_reviews`) and price level (`price`).
+**Prediction Problem:** Can we predict a business’s average Google Maps rating using business metadata such as price level and number of reviews? To do this we will develop a regression model to predict a business's average Google Maps rating (`avg_rating`) utilizing information about the business, including number of reviews (`num_of_reviews`) and price level (`price`).
 
-**Response Variable:** `avg_rating`, we chose this variable becasue a business's average rating is an important metric of a customer's satisifaction and overall success.
+**Response Variable:** `avg_rating`, we chose this variable becasue a business's average rating is an important metric of a customer's satisifaction and overall success and therefore, is an ideal variable to predict. Furthermore, it is a quantative variable which is needed since we are using a regression and not a classification model. 
 
 **Applied Features and Justification:**
 
