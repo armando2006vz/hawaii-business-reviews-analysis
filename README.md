@@ -197,8 +197,8 @@ This baseline model perfomance appears relatively weak, as it currently only exp
 
 **Additional Features:**
 
-- `zipcode` - captures geographic informatio nabout business location, customer demogrpahic could be different across Hawaii as this could influence business ratings.
-- `description_length` - Business's with longer description may provide info to customers about establishment, as it is possibly associatedwith satisfaction of customer.
+- `zipcode` - We wanted to use zipcode since it captures geographic information about business location, which could be associated with customer demographics and business environment. More specifically, some parts of the island might be regarded as more “luxurious” or “fancy,” which may be associated with higher average business ratings if customers rate businesses in those areas more highly than others. Therefore, zipcode may have an association with `avg_rating`, which can help our model performance by adding location based information that was not captured by `price` or `num_of_reviews` alone.
+- `description_length` - Businesses with longer descriptions may prioritize providing customers with more detailed information which may highlight their attention to detail. A longer description could also suggest that a business is more established which may also be associated with higher average ratings. Therefore, `description_length` may help improve model performance by capturing additional information about how much effort a business puts in which may influence the `avg_rating`.
 
 Final model uses 4 features:
 - `price` (ordinal)
