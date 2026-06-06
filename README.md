@@ -52,7 +52,7 @@ Firstly, we subset `reviews` to only include `user_id`, `rating`, and `gmap_id` 
 | 1.12409e+20 |        4 | 0x7c0014dcca83e7b1:0x1414a4475d8c17d | Buona Sera | $$      |
 | 1.15716e+20 |        5 | 0x7c0014dcca83e7b1:0x1414a4475d8c17d | Buona Sera | $$      |
 
-### Univariate Analysis
+## Univariate Analysis
 
 <iframe
 src="assets/customer-rating-distribution.html"
@@ -72,7 +72,7 @@ frameborder="0"
 
 This is a bar graph of the categorical variable of price levels (`$`, `$$`, `$$$`, `$$$$`). From this, we can see that most of the counts lie in the first two price levels which results in a right skewed distribution.
 
-### Bivariate Analysis
+## Bivariate Analysis
 
 <iframe
 src="assets/ratings-by-price-level.html"
@@ -83,15 +83,17 @@ frameborder="0"
 
 This is a stacked bar chart which describes the distribution of ratings over each price level. Furthermore, it allows us to see that the frequency of ratings with a `5` tends to increase as the price level increases and other ratings tend to decrease in proportion.
 
-### Interesting Aggregates
+## Interesting Aggregates
 
-## Assessment of Missingness
+# Assessment of Missingness
 
-### NMAR Analysis
+## NMAR Analysis
 
 We think price may be NMAR because we hypothesize that whether a business has a listed price could depend on the price level itself. For example, if a business is very expensive, it may be less likely to have `$$$$` displayed because that could deter potential customers. Therefore, the missingness of price may depend on the unobserved value of price itself, rather than being fully explained by other observed columns in the dataset.
 
-### Missingness Dependency
+## Missingness Dependency
+
+### Missingness of Price Does Not Depend on Another Column
 
 Our first missingness permutation test is:
 
@@ -107,6 +109,8 @@ width="800"
 height="600"
 frameborder="0"
 ></iframe>
+
+### Missingness of Price Depends on Another Column
 
 Our second missingness permutation test is:
 
