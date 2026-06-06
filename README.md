@@ -204,7 +204,7 @@ Final model uses 4 features:
 - `price` (ordinal)
 - `num_of_reviews` (quantitative)
 - `zipcode` (nominal)
-- `description_length` (quantitative
+- `description_length` (quantitative)
 
 **Feature Transformations:**
 
