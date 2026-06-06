@@ -194,6 +194,7 @@ These preprocessing steps and fitting of the model were implmented in a sklearn 
 This baseline model perfomance appears relatively weak, as it currently only explains about 4.8% of variance in business ratings, suggesting that these features aren't significantly influencing business ratings. 
 
 ## Final Model
+Our final model was a `RandomForestRegressor` to predict a business's average google Maps rating. We selected a Random Forest Regressor as it will be able nonlinear relationships between introduced feature that baseline model may miss.
 
 **Additional Features:**
 
@@ -218,6 +219,10 @@ A logarithmic tranformation (`log1p`) was applied to `num_of_reviews` to account
 
 Preprocessing and fitting of model was implemented in sklearn pipeline
 
+To create best model, we performed `GridSearchV` over Random Forest hyperparameters. In specific, we tuned the following hyperparameters to the best-performing in cross-validation performance:
+- `n_estimators` (# of trees) = 10
+- `max_depth`(max depth of each tree) = 300
+  
 **Model Performance:**
 - R²: 0.055
 
