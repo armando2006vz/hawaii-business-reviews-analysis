@@ -113,12 +113,6 @@ Our first missingness permutation test is:
 
 After running a permutation test we got a p-value of `.178` which is larger than our significance level of `.05`, therefore we fail to reject the null hypothesis and conclude that the missingness of hours may be independent of the average rating.
 
-<iframe
-src="assets/average-rating-by-hours-missingness.html"
-width="800"
-height="600"
-frameborder="0"
-></iframe>
 
 ### Missingness of Price Depends on Another Column
 
@@ -129,6 +123,13 @@ Our second missingness permutation test is:
 **Alternative Hypothesis:** The distribution of `num_of_reviews` is different for when `hours_missing` is true and when `hours_missing` is false.
 
 After running a permutation test we got a p-value of `.001996` which is less than our significance level of `.05`, therefore we reject the null hypothesis and conclude that the missingness of hours depends on the `num_of_reviews`.
+
+<iframe
+src="assets/hours_reviews_fig.html"
+width="800"
+height="600"
+frameborder="0"
+></iframe>
 
 ## Hypothesis Testing
 
