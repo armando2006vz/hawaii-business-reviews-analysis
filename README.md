@@ -85,6 +85,16 @@ This is a stacked bar chart which describes the distribution of ratings over eac
 
 ## Interesting Aggregates
 
+| price   |   avg_rating |   num_of_reviews |
+|:--------|-------------:|-----------------:|
+| $       |         4.15 |              249 |
+| $$      |         4.22 |              371 |
+| $$$     |         4.29 |              323 |
+| $$$$    |         4.42 |              330 |
+| Missing |         4.38 |              103 |
+
+We grouped the `meta` DataFrame by `price` and calculated aggregate statistics for each price level. More specifically, we calculated the mean `avg_rating` and mean `num_of_reviews` to see whether any trends appeared across price levels. From the table, we can roughly see that as price level increases, the mean average rating also increases. Additionally, the average number of reviews is highest for businesses with a `$$` price level, suggesting that `$$` priced businesses may receive more review frequency than the other price groups.
+
 # Assessment of Missingness
 
 ## NMAR Analysis
