@@ -217,6 +217,8 @@ A logarithmic tranformation (`log1p`) was applied to `num_of_reviews` to account
 
 Preprocessing and fitting of model was implemented in sklearn pipeline
 
+**Hyperparameters:**
+
 To create best model, we performed `GridSearchV` over Random Forest hyperparameters. In specific, we tuned the following hyperparameters to the best-performing in cross-validation performance:
 - `n_estimators` (# of trees) = 10
 - `max_depth`(max depth of each tree) = 300
