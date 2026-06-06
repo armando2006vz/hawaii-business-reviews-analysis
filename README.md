@@ -210,9 +210,9 @@ Final model uses 4 features:
 
 Since `price` is an ordinal categorical variable, it was encoded using `OrdinalEncoder` with the following ordering: `$ < $$ < $$$ < $$$$`
 
-A logarithmic tranformation (`log1p`) was applied to `num_of_reviews` to account for large differences in review counts across a competitive business landscape.
+A logarithmic tranformation (`log1p`) was applied to `num_of_reviews` to account for large differences in review counts across a diverse business landscape.
 
-`zipcode` was encoded using `OneHotEncoder`  because zip codes are nominal categories without orderings.
+`zipcode` was encoded using `OneHotEncoder` because zip codes are nominal categories without orderings.
 
 `description_length` is a numerical feature that counts words in description.
 
@@ -226,7 +226,7 @@ Preprocessing and fitting of model was implemented in sklearn pipeline
 
 ## Fairness Analysis
 
-To evaluate model performance across groups, we will compare businesses with relativel low reviews agaisnt business with many reviews.
+To evaluate model performance across groups, we will compare businesses with relatively low reviews agaisnt businesses with many reviews.
 
 **Groups:**
 - Group X: Low-review businesses (below the median # of reviews)
