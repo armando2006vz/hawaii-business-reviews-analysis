@@ -145,16 +145,16 @@ frameborder="0"
 
 ## Framing a Prediction Problem
 
-**Prediction Problem:** We developed a regression model to predict a business's average Google Maps rating (avg_rating) utilizing information about the business, including number of reviews and price level
+**Prediction Problem:** We developed a regression model to predict a business's average Google Maps rating (`avg_rating`) utilizing information about the business, including number of reviews (`num_of_reviews`) and price level (`price`).
 
-**Response Variable:** avg_rating, we chose this variable becasue a business's average rating is an important of a customer's satisifaction and overall success.
+**Response Variable:** `avg_rating`, we chose this variable becasue a business's average rating is an important metric of a customer's satisifaction and overall success.
 
-**Applied Features:**
+**Applied Features and Justification:**
 
-- `num_of_reviews`: Number of reviews provides info about a business's popularity, possibly associated with average rating
-- `price`: Price level could influence influence a customers expectations and affect ratings
+- `num_of_reviews`: Number of reviews provides info about a business's popularity, with more reviews possibly indicating a higher popularity and therefore a positive association with average rating. This is also available during the time of analysis as we are using prior information about the number of reviews. 
+- `price`: Price level could influence influence a customers expectations and affect ratings. For example, more expensive products are usually associated with a higher level of satisfaction and possibly a positive associtation with average rating. Furthermore, a price level is already set so it is available at the time of analysis. 
 
-**Evaluation Metric:** R², With this being a regression problem, R² allows us to measure how much variance is explained by model.
+**Evaluation Metric:** We used R² as our evaluation metric because this is a regression problem where the goal is to understand how well business metadata explains variation in average Google Maps ratings. Since `avg_rating` is a continuous quantitative variable, R² is useful because it measures the proportion of variance in ratings that is explained by the model. This makes it easier to compare the two final models in terms of how much additional explanatory power the added features provide. Furthermore, other metrics such as root mean square error (RMSE) only focus on the average size of prediction errors, while R² focuses on how well the model explains differences across businesses which is more useful for our question about how well features are at predicting average rating.
 
 ## Baseline Model
 
@@ -178,7 +178,7 @@ These preprocessing steps and fitting of the model were implmented in a sklearn 
 
 - R² - 0.048
 
-This baseline model perfomance appears relatively weak, as it currently only explains about 4.8% of variance in business ratings . 
+This baseline model perfomance appears relatively weak, as it currently only explains about 4.8% of variance in business ratings. 
 
 ## Final Model
 
